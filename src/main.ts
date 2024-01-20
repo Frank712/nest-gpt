@@ -10,7 +10,6 @@ async function bootstrap() {
       forbidNonWhitelisted: true,
     }),
   );
-  console.log('OPEN_API_KEY', process.env.OPEN_API_KEY);
   app.enableCors();
   await app.listen(3000);
 }

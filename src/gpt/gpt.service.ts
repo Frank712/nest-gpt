@@ -10,7 +10,6 @@ export class GptService {
   });
 
   async orthographyCheck(orthographyDto: OrthographyDto) {
-    console.log(orthographyDto);
     return await orthographyUseCase(this.openai, {
       prompt: orthographyDto.prompt,
     });

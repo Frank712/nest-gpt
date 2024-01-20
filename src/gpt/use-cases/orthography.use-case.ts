@@ -35,9 +35,6 @@ export const orthographyUseCase = async (openai: OpenAI, options: Options) => {
     ],
     model: 'gpt-4',
   });
-
-  console.log(completion, options);
-  console.log(completion.choices[0]);
   const jsonResponse = JSON.parse(completion.choices[0].message.content);
   return jsonResponse;
 };

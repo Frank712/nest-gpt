@@ -26,6 +26,6 @@ export const proConstDiscusserUseCase = async (
     model: 'gpt-4',
   });
   console.log({ completion });
-  const jsonResponse = completion.choices[0];
+  const jsonResponse = completion.choices[0].message;
   return jsonResponse;
 };
